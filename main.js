@@ -5,34 +5,18 @@ new fullpage('#fullpage', {
     scrollBar:true
 });
 
-
-// $(window).scroll(function(){
-//     $('nav').toggleClass('scrolled', $(this).scrollTop() > 1080);
-//     });
-
-// document.getElementsByTagName('nav').addEventListener("scroll", myFunction);
-
-// function myFunction() {
-//     document.getElementsByClassName('navbar').toggleClass('scrolled', (this).scrollTop() > 1080);
-// }
-
-// document.getElementById("myDIV").onscroll = function() {myFunction()};
-
-// function myFunction() {
-//   document.getElementById("demo").innerHTML = "You scrolled in div.";
-// }
-
-
-// window.addEventListener('scroll', function(e) {
-//     document.getElementById('nav').classList[e.pageX > 1 ? 'add' : 'remove']('scrolled');
-// });
-
 window.onscroll = () => fadeNavBarBackground();
 
 function fadeNavBarBackground() {
  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
   document.getElementById("nav").classList.add("scrolled");
+  document.getElementById("brand").classList.add("scrolled");
  } else {
   document.getElementById("nav").classList.remove("scrolled");
+  document.getElementById("brand").classList.remove("scrolled");
  }
 }
+
+var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '#navbar-example'
+  })
