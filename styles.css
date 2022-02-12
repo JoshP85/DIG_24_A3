@@ -1,5 +1,27 @@
+@font-face {
+    font-family: Poppins;
+    src: url('fonts/Poppins-Regular.ttf');
+
+  }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.hero {
+    background: url('images/bayley-clark-0v7BeBsQhCY-unsplash-widescreen.jpg');
+    background-size: cover;
+}
+.hero h1, h6{
+    font-family: Poppins;
+    color: white;
+    font-size: 120px;
+    position: relative;
+    top: -180px; left: 40px;
+}
+.hero h6{
+    font-size: 20px;
+    top: -210px; left: 65px;
 }
