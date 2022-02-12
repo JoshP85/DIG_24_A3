@@ -9,18 +9,36 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    position: relative;
+}
 
-.section{
+.section {
     background-color: lightgray;
 }
 
 
 .bg-light {
-    background:transparent !important;
-    transition:0.75s ease;
+    background: transparent !important;
+    transition: 0.75s ease;
 }
+
 .bg-light.scrolled {
     background: white !important;
+}
+
+.navbar-brand {
+    opacity: 0;
+    transition: 0.75s ease;
+}
+
+.navbar-brand.scrolled {
+    opacity: 1;
+}
+
+.navbar-nav{
+    font-size: 18px;
+    color: black;
 }
 
 .hero {
