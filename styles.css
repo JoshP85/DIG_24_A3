@@ -10,6 +10,19 @@
     box-sizing: border-box;
 }
 
+.section{
+    background-color: lightgray;
+}
+
+
+.bg-light {
+    background:transparent !important;
+    transition:0.75s ease;
+}
+.bg-light.scrolled {
+    background: white !important;
+}
+
 .hero {
     background: url('images/bayley-clark-0v7BeBsQhCY-unsplash-widescreen.jpg');
     background-size: cover;
@@ -21,12 +34,14 @@ h6 {
     color: white;
     font-size: 120px;
     position: relative;
-    top: -180px;
+    top: -185px;
     left: 40px;
+    text-shadow: 1px 1px lightgrey;
 }
 
 .hero h6 {
     font-size: 20px;
     top: -210px;
     left: 65px;
+    text-shadow: none;
 }
