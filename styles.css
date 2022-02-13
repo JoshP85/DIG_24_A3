@@ -9,10 +9,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* html {
-    scroll-behavior: smooth;
-  } */
-body{
+
+body {
     position: relative;
 }
 
@@ -39,9 +37,12 @@ body{
     opacity: 1;
 }
 
-.navbar-nav{
+.navbar-nav {
     font-size: 18px;
-    color: black;
+}
+
+.active {
+    color: black !important;
 }
 
 .hero {
