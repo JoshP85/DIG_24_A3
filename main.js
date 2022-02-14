@@ -3,7 +3,7 @@ new fullpage('#fullpage', {
     autoScrolling: true,
     scrollHorizontally: true,
     scrollBar: true,
-    anchors: ['home', 'gallery', 'history', 'things-to-do', 'accom', 'getting-here'],
+    anchors: ['home', 'photo-gallery', 'history', 'things-to-do', 'accomodation', 'getting-here'],
     menu: '#nav-ul'
 });
 
