@@ -68,11 +68,16 @@ h6 {
     text-shadow: none;
 }
 
+#photo-gallery1{
+    background: url('images/Screenshot 2022-02-14 203304.jpg');
+    background-size: cover;
+    height: 100%;
+}
 .lightbox-gallery h2 {
     font-weight: bold;
     margin-bottom: 40px;
     padding-top: 40px;
-    color: #fff
+    color: #fff;
 }
 
 @media (max-width:767px) {
@@ -93,10 +98,14 @@ h6 {
     margin-bottom: 0
 }
 
-.lightbox-gallery .photos {
+.lightbox-gallery .row {
     padding-bottom: 20px
 }
 
 .lightbox-gallery .item {
     padding-bottom: 30px
+}
+.d-block .img-fluid{
+height: 100%;
+width: 100%;
 }
