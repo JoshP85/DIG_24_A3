@@ -1,7 +1,10 @@
 @font-face {
     font-family: Poppins;
     src: url('fonts/Poppins-Regular.ttf');
-
+}
+@font-face {
+    font-family: NunitoSans;
+    src: url('fonts/NunitoSans-Regular.ttf');
 }
 
 * {
@@ -15,7 +18,7 @@ body {
 }
 
 .section {
-    background-color: lightgray;
+    background-color: #FCFCFC;
 }
 
 
@@ -26,6 +29,7 @@ body {
 
 .bg-light.scrolled {
     background: white !important;
+    box-shadow: 2px 2px 80px 5px lightgrey;
 }
 
 .navbar-brand {
@@ -51,7 +55,7 @@ body {
 }
 
 .hero h1,
-h6 {
+.hero h6 {
     font-family: Poppins;
     color: white;
     font-size: 120px;
@@ -68,16 +72,17 @@ h6 {
     text-shadow: none;
 }
 
-#photo-gallery1{
-    background: url('images/Screenshot 2022-02-14 203304.jpg');
-    background-size: cover;
-    height: 100%;
-}
 .lightbox-gallery h2 {
+    font-family: NunitoSans;
     font-weight: bold;
-    margin-bottom: 40px;
     padding-top: 40px;
-    color: #fff;
+    color: black;
+}
+.lightbox-gallery p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    padding-top: 0;
+
 }
 
 @media (max-width:767px) {
@@ -88,24 +93,10 @@ h6 {
     }
 }
 
-.lightbox-gallery .intro {
-    font-size: 16px;
-    max-width: 500px;
-    margin: 0 auto 40px
-}
-
-.lightbox-gallery .intro p {
-    margin-bottom: 0
-}
-
 .lightbox-gallery .row {
     padding-bottom: 20px
 }
 
 .lightbox-gallery .item {
     padding-bottom: 30px
-}
-.d-block .img-fluid{
-height: 100%;
-width: 100%;
 }
