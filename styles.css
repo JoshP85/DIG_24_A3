@@ -12,6 +12,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+} */
 
 body {
     position: relative;
@@ -54,21 +62,30 @@ body {
     background-size: cover;
 }
 
-.hero h1,
-.hero h6 {
+.page-heading{
     font-family: Poppins;
     color: white;
-    font-size: 120px;
+    max-width: 90%;
     position: relative;
     top: -185px;
-    left: 40px;
+    left: 60px;
+}
+
+.main-heading {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+    font-size: 120px;
     text-shadow: 1px 1px lightgrey;
 }
 
-.hero h6 {
+.main-sub-heading {
+    position: absolute;
+    top: 133px;
+    left: 43px;
+    font-size: 18px;
     font-size: 20px;
-    top: -210px;
-    left: 65px;
     text-shadow: none;
 }
 
