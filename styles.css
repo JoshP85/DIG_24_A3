@@ -1,7 +1,10 @@
 @font-face {
     font-family: Poppins;
     src: url('fonts/Poppins-Regular.ttf');
-
+}
+@font-face {
+    font-family: NunitoSans;
+    src: url('fonts/NunitoSans-Regular.ttf');
 }
 
 * {
@@ -9,13 +12,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+} */
 
 body {
     position: relative;
 }
 
 .section {
-    background-color: lightgray;
+    background-color: #FCFCFC;
 }
 
 
@@ -26,6 +37,7 @@ body {
 
 .bg-light.scrolled {
     background: white !important;
+    box-shadow: 2px 2px 80px 5px lightgrey;
 }
 
 .navbar-brand {
@@ -50,20 +62,58 @@ body {
     background-size: cover;
 }
 
-.hero h1,
-h6 {
+.page-heading{
     font-family: Poppins;
     color: white;
-    font-size: 120px;
+    max-width: 90%;
     position: relative;
     top: -185px;
-    left: 40px;
+    left: 60px;
+}
+
+.main-heading {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+    font-size: 120px;
     text-shadow: 1px 1px lightgrey;
 }
 
-.hero h6 {
+.main-sub-heading {
+    position: absolute;
+    top: 133px;
+    left: 43px;
+    font-size: 18px;
     font-size: 20px;
-    top: -210px;
-    left: 65px;
     text-shadow: none;
+}
+
+.lightbox-gallery h2 {
+    font-family: NunitoSans;
+    font-weight: bold;
+    padding-top: 40px;
+    color: black;
+}
+.lightbox-gallery p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    padding-top: 0;
+
+}
+
+@media (max-width:767px) {
+    .lightbox-gallery h2 {
+        margin-bottom: 25px;
+        padding-top: 25px;
+        font-size: 24px
+    }
+}
+
+.lightbox-gallery .row {
+    padding-bottom: 20px
+}
+
+.lightbox-gallery .item {
+    padding-bottom: 30px
 }
