@@ -2,6 +2,7 @@
     font-family: Poppins;
     src: url('fonts/Poppins-Regular.ttf');
 }
+
 @font-face {
     font-family: NunitoSans;
     src: url('fonts/NunitoSans-Regular.ttf');
@@ -12,6 +13,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /* html,body
 {
     width: 100%;
@@ -42,6 +44,8 @@ body {
 
 .navbar-brand {
     opacity: 0;
+    margin: 0px;
+    margin-right: -116.58px;
     transition: 0.75s ease;
 }
 
@@ -53,40 +57,75 @@ body {
     font-size: 18px;
 }
 
+@media screen and (max-width: 840px) {
+    .navbar-nav {
+        font-size: 15px;
+    }
+}
+
 .active {
     color: black !important;
 }
 
 .hero {
+    width: 100%;
+    height: 500px;
     background: url('images/bayley-clark-0v7BeBsQhCY-unsplash-widescreen.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
-
-.page-heading{
+.container{
+    flex-flow: column;
+}
+.hero h1 {
     font-family: Poppins;
-    color: white;
-    max-width: 90%;
-    position: relative;
-    top: -185px;
-    left: 60px;
-}
-
-.main-heading {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    font-size: 18px;
+    color: #FCFCFC;
     font-size: 120px;
-    text-shadow: 1px 1px lightgrey;
+    position: fixed;
+    top:30%;
+	left:4%;
+    margin-bottom: 0px;
+    text-shadow: 1px 1px gray;
 }
 
-.main-sub-heading {
-    position: absolute;
-    top: 133px;
-    left: 43px;
-    font-size: 18px;
+.hero p {
+    color: #FCFCFC;
     font-size: 20px;
+    position: relative;
+    bottom: 20px;
+    left: 25px;
     text-shadow: none;
+}
+
+@media screen and (max-width: 767px) {
+    .hero h1 {
+        font-size: 80px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .hero p {
+        font-size: 15px;
+        bottom:12px;
+        left:12px;
+    }
+}
+
+@media screen and (max-width: 514px) {
+    .hero h1 {
+        font-size: 55px;
+        left: 50%;
+    transform: translateX(-50%);
+    }
+}
+@media screen and (max-width: 514px) {
+    .hero p {
+        font-size: 14px;
+        bottom:0px;
+        left:50%;
+        transform: translateX(-40%);
+    }
 }
 
 .lightbox-gallery h2 {
@@ -95,6 +134,7 @@ body {
     padding-top: 40px;
     color: black;
 }
+
 .lightbox-gallery p {
     font-size: 20px;
     margin-bottom: 40px;
