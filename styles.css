@@ -43,6 +43,7 @@ body {
 }
 
 .navbar-brand {
+    font-family: Poppins;
     opacity: 0;
     margin: 0px;
     margin-right: -116.58px;
@@ -54,12 +55,18 @@ body {
 }
 
 .navbar-nav {
+    font-family: NunitoSans;
     font-size: 18px;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 880px) {
     .navbar-nav {
         font-size: 15px;
+    }
+}
+@media screen and (max-width: 792px) {
+    .navbar-nav {
+        font-size: 14px;
     }
 }
 
@@ -127,11 +134,14 @@ body {
         transform: translateX(-40%);
     }
 }
-
+.container{
+    position: relative;
+    bottom: 10px;
+}
 .lightbox-gallery h2 {
     font-family: NunitoSans;
     font-weight: bold;
-    padding-top: 40px;
+    padding-top: 0px;
     color: black;
 }
 
