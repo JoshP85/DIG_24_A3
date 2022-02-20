@@ -168,16 +168,39 @@ body {
 .lightbox-gallery .item {
     padding-bottom: 30px
 }
-.btn-group{
-    display: flex;
-    justify-content: space-between;
+sl-tab-group::part(nav){
     position: relative;
-    bottom: 40vh;
-    margin-left: 100px;
-    margin-right: 100px;
-    
+    /* bottom: 40vh; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
 }
-.btn{
+
+sl-tab-panel::part(base){
+    position: relative;
+    /* bottom: 30vh; */
+    /* display: block; */
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+.card-overview {
+    max-width: 300px;
+  }
+
+  .card-overview small {
+    color: var(--sl-color-neutral-500);
+  }
+
+  .card-overview [slot="footer"] {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+  }
+
+/* .sl-tab-panel{
     font-family: NunitoSans;
     font-weight: bold;
     color: black;
@@ -185,16 +208,20 @@ body {
     margin: auto;
     border: none;
 }
-.btn:hover {
-    background-color: lightblue;
-
-}
-.btn.focus, .btn:focus {
-    background-color: lightblue;
-    outline: 0;
-    box-shadow: none!important;
-}
-
+sl-tab-group{
+    /* font-family: NunitoSans;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 40vh;
+    margin-left: auto;
+    margin-right: auto; */
+    
+/* }
+sl-tab-panel{
+    height: auto;
+} */ 
 
 /* <--- Getting here section ---> */
 
