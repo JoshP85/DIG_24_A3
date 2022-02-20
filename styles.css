@@ -176,17 +176,31 @@ body {
 .getting-here .container {
     position: relative;
     bottom: 10px;
-    
+
 }
 
-.getting-here h2{
+.getting-here h2 {
     font-family: NunitoSans;
     font-weight: bold;
     padding-top: 0px;
     color: black;
 }
-.getting-here p{
+
+.getting-here p {
+    font-family: NunitoSans;
     font-size: 20px;
     margin-bottom: 40px;
     padding-top: 0;
+}
+
+.google-map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 615px) {
+    .google-iframe {
+        display: none;
+    }
 }
