@@ -14,14 +14,6 @@
     box-sizing: border-box;
 }
 
-/* html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-} */
 
 body {
     position: relative;
@@ -31,7 +23,7 @@ body {
     background-color: #FCFCFC;
 }
 
-
+/* <--- Nav Bar ---> */
 .bg-light {
     background: transparent !important;
     transition: 0.75s ease;
@@ -64,6 +56,7 @@ body {
         font-size: 15px;
     }
 }
+
 @media screen and (max-width: 792px) {
     .navbar-nav {
         font-size: 14px;
@@ -74,6 +67,7 @@ body {
     color: black !important;
 }
 
+/* <--- Landing/Hero section ---> */
 .hero {
     width: 100%;
     height: 500px;
@@ -83,16 +77,18 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
-.container{
+
+.hero .container {
     flex-flow: column;
 }
+
 .hero h1 {
     font-family: Poppins;
     color: #FCFCFC;
     font-size: 120px;
     position: fixed;
-    top:30%;
-	left:4%;
+    top: 30%;
+    left: 4%;
     margin-bottom: 0px;
     text-shadow: 1px 1px gray;
 }
@@ -111,11 +107,12 @@ body {
         font-size: 80px;
     }
 }
+
 @media screen and (max-width: 767px) {
     .hero p {
         font-size: 15px;
-        bottom:12px;
-        left:12px;
+        bottom: 12px;
+        left: 12px;
     }
 }
 
@@ -123,21 +120,25 @@ body {
     .hero h1 {
         font-size: 55px;
         left: 50%;
-    transform: translateX(-50%);
+        transform: translateX(-50%);
     }
 }
+
 @media screen and (max-width: 514px) {
     .hero p {
         font-size: 14px;
-        bottom:0px;
-        left:50%;
+        bottom: 0px;
+        left: 50%;
         transform: translateX(-40%);
     }
 }
-.container{
+
+/* <--- Photo Gallery section ---> */
+.lightbox-gallery .container {
     position: relative;
     bottom: 10px;
 }
+
 .lightbox-gallery h2 {
     font-family: NunitoSans;
     font-weight: bold;
@@ -166,4 +167,40 @@ body {
 
 .lightbox-gallery .item {
     padding-bottom: 30px
+}
+
+
+
+/* <--- Getting here section ---> */
+
+.getting-here .container {
+    position: relative;
+    bottom: 10px;
+
+}
+
+.getting-here h2 {
+    font-family: NunitoSans;
+    font-weight: bold;
+    padding-top: 0px;
+    color: black;
+}
+
+.getting-here p {
+    font-family: NunitoSans;
+    font-size: 20px;
+    margin-bottom: 40px;
+    padding-top: 0;
+}
+
+.google-map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 615px) {
+    .google-iframe {
+        display: none;
+    }
 }
