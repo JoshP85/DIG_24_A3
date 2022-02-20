@@ -168,7 +168,32 @@ body {
 .lightbox-gallery .item {
     padding-bottom: 30px
 }
+.btn-group{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 40vh;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+}
+.btn{
+    font-family: NunitoSans;
+    font-weight: bold;
+    color: black;
+    padding: 5px;
+    margin: auto;
+    border: none;
+}
+.btn:hover {
+    background-color: lightblue;
 
+}
+.btn.focus, .btn:focus {
+    background-color: lightblue;
+    outline: 0;
+    box-shadow: none!important;
+}
 
 
 /* <--- Getting here section ---> */
