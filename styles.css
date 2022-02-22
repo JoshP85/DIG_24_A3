@@ -169,7 +169,65 @@ body {
     padding-bottom: 30px
 }
 
+/* <--- Things to do section ---> */
+.backGI{
+    background-image: url('images/city-beach.jpg');
+    height: 100%;
+    z-index: -1;
+}
+sl-tab-group::part(nav){
+    position: relative;
+    /* background-image: url('images/city-beach.jpg'); */
+    /* bottom: 40vh; */
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
 
+sl-tab-panel::part(base){
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+.card-overview {
+    max-width: 300px;
+  }
+
+  .card-overview small {
+    color: var(--sl-color-neutral-500);
+  }
+
+  .card-overview [slot="footer"] {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+  }
+
+/* .sl-tab-panel{
+    font-family: NunitoSans;
+    font-weight: bold;
+    color: black;
+    padding: 5px;
+    margin: auto;
+    border: none;
+}
+sl-tab-group{
+    /* font-family: NunitoSans;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 40vh;
+    margin-left: auto;
+    margin-right: auto; */
+    
+/* }
+sl-tab-panel{
+    height: auto;
+} */ 
 
 /* <--- Getting here section ---> */
 
