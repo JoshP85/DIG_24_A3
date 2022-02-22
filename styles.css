@@ -17,10 +17,19 @@
 
 body {
     position: relative;
+    width: 100%;
 }
 
 .section {
     background-color: #FCFCFC;
+}
+
+p,
+h2,
+h6 {
+    font-family: NunitoSans;
+    padding-top: 0;
+    color: black;
 }
 
 /* <--- Nav Bar ---> */
@@ -139,20 +148,6 @@ body {
     bottom: 10px;
 }
 
-.lightbox-gallery h2 {
-    font-family: NunitoSans;
-    font-weight: bold;
-    padding-top: 0px;
-    color: black;
-}
-
-.lightbox-gallery p {
-    font-size: 20px;
-    margin-bottom: 40px;
-    padding-top: 0;
-
-}
-
 @media (max-width:767px) {
     .lightbox-gallery h2 {
         margin-bottom: 25px;
@@ -160,6 +155,8 @@ body {
         font-size: 24px
     }
 }
+
+
 
 .lightbox-gallery .row {
     padding-bottom: 20px
@@ -169,40 +166,84 @@ body {
     padding-bottom: 30px
 }
 
-/* <--- Things to do section ---> */
-.backGI{
-    background-image: url('images/city-beach.jpg');
-    height: 100%;
-    z-index: -1;
+@media (max-width:576px) {
+
+    .img-thumbnail,
+    .lightbox-gallery .row,
+    .lightbox-gallery .item {
+        padding: 0;
+        transition: 0.75s ease;
+    }
 }
-sl-tab-group::part(nav){
-    position: relative;
-    height: 100%;
+
+@media (min-width:576px) {
+
+    .img-thumbnail,
+    .lightbox-gallery .row,
+    .lightbox-gallery .item {
+        transition: 0.75s ease;
+    }
+}
+
+/* <--- History/About section ---> */
+.about-history .container {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: auto;
+    width: 100%;
 }
 
-sl-tab-panel::part(base){
+@media (max-width:767px) {
+    .about-history h2 {
+        margin-bottom: 25px;
+        padding-top: 25px;
+        font-size: 24px
+    }
+}
+
+.about-history .row {
+    padding-bottom: 20px
+}
+
+.about-history .item {
+    padding-bottom: 30px
+}
+
+@media (max-width:992px) {
+
+    .about-history .row,
+    .about-history .item {
+        padding: 0;
+    }
+}
+
+/* <--- Things to do section ---> */
+sl-tab-group::part(nav) {
     display: flex;
-    justify-content:space-around;
+    justify-content: center;
+
+}
+
+sl-tab-panel::part(base) {
+    display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
+    
 }
 
 .card-overview {
     max-width: 300px;
-  }
+}
 
-  .card-overview small {
+.card-overview small {
     color: var(--sl-color-neutral-500);
-  }
+}
 
-  .card-overview [slot="footer"] {
-    display: flex; 
-    justify-content: space-between; 
+.card-overview [slot="footer"] {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-  }
+}
 
 /* <--- Getting here section ---> */
 
@@ -212,17 +253,8 @@ sl-tab-panel::part(base){
 
 }
 
-.getting-here h2 {
+.getting-here li {
     font-family: NunitoSans;
-    font-weight: bold;
-    padding-top: 0px;
-    color: black;
-}
-
-.getting-here p {
-    font-family: NunitoSans;
-    font-size: 20px;
-    margin-bottom: 40px;
     padding-top: 0;
 }
 
