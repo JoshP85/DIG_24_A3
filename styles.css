@@ -187,7 +187,9 @@ h6 {
 
 /* <--- History/About section ---> */
 .about-history .container {
-    display: block;
+    display:block;
+    position: relative;
+    top: -210px;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -201,19 +203,68 @@ h6 {
     }
 }
 
-.about-history .row {
-    padding-bottom: 20px
+.img-fade img {
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 100%;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
 }
 
-.about-history .item {
-    padding-bottom: 30px
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
 }
 
-@media (max-width:992px) {
+#img2 {
+    animation-delay: -4s;
+}
+#img3 {
+    animation-delay: -2s;
+}
 
-    .about-history .row,
-    .about-history .item {
-        padding: 0;
+
+.fp-controlArrow.fp-prev {
+    left: 38px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    background: url("images/clipart2826625-left.png") no-repeat;
+    cursor: pointer;
+}
+.fp-controlArrow.fp-next {
+    right: 0;
+    border: none;
+    width: 50px;
+    height: 50px;
+    background: url("images/clipart2826625-right.png") no-repeat;
+    cursor: pointer;
+}
+
+@media (max-width:1061px) {
+
+    .fp-controlArrow.fp-prev,
+    .fp-controlArrow.fp-next
+    {
+        top: 210px;
+        transition: 0.75s ease;
+    }
+}
+
+@media (max-width:508px) {
+
+    .fp-controlArrow.fp-prev,
+    .fp-controlArrow.fp-next
+    {
+        top: 140px;
+        transition: 0.75s ease;
     }
 }
 
@@ -269,3 +320,10 @@ sl-tab-panel::part(base) {
         display: none;
     }
 }
+
+@media screen and (max-width: 615px) {
+    .history .row {
+        display: none;
+    }
+}
+
