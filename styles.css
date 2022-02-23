@@ -184,12 +184,10 @@ h6 {
 }
 
 /* <--- History/About section ---> */
-.history{
+.history {
     position: relative;
-    /* bottom: 10px; */
-    
-    /* top: -100px; */
 }
+
 .about-history .container {
     display: block;
     position: relative;
@@ -209,7 +207,7 @@ h6 {
 
 @media (max-width:400px) {
 
-    .history{
+    .history {
         font-size: 12px;
     }
 }
