@@ -26,3 +26,14 @@ function fadeNavBarBackground() {
         document.getElementById("brand").classList.remove("scrolled");
     }
 }
+
+const photoSwitch = document.querySelector('#selTheme');
+
+photoSwitch.addEventListener('sl-change', () =>{
+    if(photoSwitch.checked === true){
+        document.querySelector('.hero').style.backgroundImage = "url('images/sublime-night.png')";
+    }
+    else{
+        document.querySelector('.hero').style.backgroundImage = "url('images/bayley-clark-0v7BeBsQhCY-unsplash-widescreen.jpg')";
+    }
+})
