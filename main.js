@@ -9,7 +9,7 @@ new fullpage('#fullpage', {
     scrollBar: true,
     // Disables fullpage js at widths of 800 or less
     responsiveWidth: 800,
-    anchors: ['home', 'photo-gallery', 'about-history', 'things-to-do', 'getting-here'],
+    anchors: ['home', 'about-history', 'things-to-do', 'photo-gallery', 'getting-here'],
     menu: '#nav-ul'
 });
 
