@@ -26,3 +26,15 @@ function fadeNavBarBackground() {
         document.getElementById("brand").classList.remove("scrolled");
     }
 }
+
+
+// Changes the hero image to night if the switch is clicked
+const photoSwitch = document.querySelector('#selTheme');
+
+photoSwitch.addEventListener('sl-change', () => {
+    if (photoSwitch.checked === true) {
+        document.querySelector('.hero').style.backgroundImage = "url('images/sublime-night.png')";
+    } else {
+        document.querySelector('.hero').style.backgroundImage = "url('images/bayley-clark-0v7BeBsQhCY-unsplash-widescreen.jpg')";
+    }
+})
