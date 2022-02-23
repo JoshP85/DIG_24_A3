@@ -156,8 +156,6 @@ h6 {
     }
 }
 
-
-
 .lightbox-gallery .row {
     padding-bottom: 20px
 }
@@ -203,6 +201,7 @@ h6 {
     }
 }
 
+/* CSS animation for changing images in about/history slides */
 .img-fade img {
     position: absolute;
     left: 0;
@@ -215,6 +214,7 @@ h6 {
     animation-duration: 6s;
 }
 
+/* Fades the images between each one */
 @keyframes fade {
     0% {
         opacity: 0;
@@ -245,7 +245,7 @@ h6 {
     animation-delay: -2s;
 }
 
-
+/* Custom arrows on fullpage horizontal slides */
 .fp-controlArrow.fp-prev {
     left: 38px;
     border: none;
@@ -264,6 +264,7 @@ h6 {
     cursor: pointer;
 }
 
+/* Change position of arrows on screen to avoid overlapping text */
 @media (max-width:1061px) {
 
     .fp-controlArrow.fp-prev,
@@ -283,19 +284,19 @@ h6 {
 }
 
 /* <--- Things to do section ---> */
+/* Shoelace tab panel */
 sl-tab-group::part(nav) {
     display: flex;
     justify-content: center;
-
 }
 
 sl-tab-panel::part(base) {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-
 }
 
+/* Shoelace cards within tab panel */
 .card-overview {
     max-width: 300px;
 }
@@ -311,11 +312,9 @@ sl-tab-panel::part(base) {
 }
 
 /* <--- Getting here section ---> */
-
 .getting-here .container {
     position: relative;
     bottom: 10px;
-
 }
 
 .getting-here li {
@@ -329,14 +328,9 @@ sl-tab-panel::part(base) {
     justify-content: center;
 }
 
+/* Remove embeded google maps on smaller screens */
 @media screen and (max-width: 615px) {
     .google-iframe {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 615px) {
-    .history .row {
         display: none;
     }
 }
