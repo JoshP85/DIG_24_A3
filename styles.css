@@ -184,20 +184,33 @@ h6 {
 }
 
 /* <--- History/About section ---> */
+.history{
+    position: relative;
+    /* bottom: 10px; */
+    
+    /* top: -100px; */
+}
 .about-history .container {
     display: block;
     position: relative;
     top: -210px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: none;
+    height: auto;
     width: 100%;
 }
 
 @media (max-width:767px) {
     .about-history h2 {
         margin-bottom: 25px;
-        padding-top: 25px;
+        padding-top: 250px;
         font-size: 24px
+    }
+}
+
+@media (max-width:400px) {
+
+    .history{
+        font-size: 12px;
     }
 }
 
@@ -208,7 +221,7 @@ h6 {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    width: 80%;
     animation-name: fade;
     animation-iteration-count: infinite;
     animation-duration: 6s;
@@ -265,20 +278,11 @@ h6 {
 }
 
 /* Change position of arrows on screen to avoid overlapping text */
-@media (max-width:1061px) {
+@media (max-width:640px) {
 
     .fp-controlArrow.fp-prev,
     .fp-controlArrow.fp-next {
-        top: 210px;
-        transition: 0.75s ease;
-    }
-}
-
-@media (max-width:508px) {
-
-    .fp-controlArrow.fp-prev,
-    .fp-controlArrow.fp-next {
-        top: 140px;
+        top: 95%;
         transition: 0.75s ease;
     }
 }

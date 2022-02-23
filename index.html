@@ -160,13 +160,20 @@
                     </div>
                 </div>
             </div>
+            <!-- Shoelace tool tips for the next and previous arrows on the fullpage.js slides -->
+            <sl-tooltip content="Previous Slide">
+                <div class="fp-controlArrow fp-prev"></div>
+            </sl-tooltip>
+            <sl-tooltip content="Next Slide">
+                <div class="fp-controlArrow fp-next"></div>
+            </sl-tooltip>
         </div>
 
         <!-- Things to do section - Shoelace tab panel with Shoelace cards--->
         <div class="section" data-anchor="things-to-do">
             <sl-tab-group placement="top">
                 <sl-tab slot="nav" panel="sight-seeing">Sight Seeing</sl-tab>
-                <sl-tab slot="nav" panel="adrenaline">Adrenaline</sl-tab>                
+                <sl-tab slot="nav" panel="adrenaline">Adrenaline</sl-tab>
                 <sl-tab slot="nav" panel="serenity">"How's the Serenity"</sl-tab><!-- https://youtu.be/ZGzrde6x4Lg -->
 
                 <sl-tab-panel name="sight-seeing">
@@ -175,12 +182,11 @@
 
                         <strong>Nan Tien Temple</strong><br>
                         The largest buddist temple in the Southern Hemisphere, located a short drive south of
-                        the
-                        Wollongong CBD.<br>
+                        the Wollongong CBD.<br>
 
                         <div slot="footer">
-                            <sl-button href="https://www.nantien.org.au/en/" target="_blank" variant="primary" pill>
-                                More Info</sl-button>
+                                <sl-button href="https://www.nantien.org.au/en/" target="_blank" variant="primary" pill>
+                                    More Info</sl-button>
                         </div>
                     </sl-card>
                     <sl-card class="card-overview">
@@ -188,8 +194,7 @@
 
                         <strong>Wollongong Botantical Gardens</strong><br>
                         Opened in 1970, these gardens are a great place to unwind and relax. You'll also find
-                        the
-                        outdoor Sunset Cinema here.<br>
+                        the outdoor Sunset Cinema here.<br>
 
                         <div slot="footer">
                             <sl-button href="https://wollongongbotanicgarden.com.au/" target="_blank" variant="primary"
@@ -201,8 +206,7 @@
 
                         <strong>Symbio Wildlife Park</strong><br>
                         Founded in 1975, this zoo boasts a wide range of animals from Australia and beyond. You
-                        can
-                        even cool off at the Symbio Splash Park.<br>
+                        can even cool off at the Symbio Splash Park.<br>
 
                         <div slot="footer">
                             <sl-button href="https://symbiozoo.com.au/" target="_blank" variant="primary" pill>
