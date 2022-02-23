@@ -1,12 +1,20 @@
+// Fullpage js implementation and options.
 new fullpage('#fullpage', {
+    // No license key as i did not have a response to my enquiries, 
+    // as this is an educational project I went ahead and implemented it without 
+    // issue to avoid having to redo whole sections.
     licenseKey: 'YOUR KEY HERE',
     autoScrolling: true,
     scrollHorizontally: true,
     scrollBar: true,
-    anchors: ['home', 'photo-gallery', 'history', 'things-to-do', 'accomodation', 'getting-here'],
+    // Disables fullpage js at widths of 800 or less
+    responsiveWidth: 800,
+    anchors: ['home', 'about-history', 'things-to-do', 'photo-gallery', 'getting-here'],
     menu: '#nav-ul'
 });
 
+
+// When at top of screen navbar will be transparent, scrolling down removes transparent property.
 window.onscroll = () => fadeNavBarBackground();
 
 function fadeNavBarBackground() {

@@ -17,10 +17,19 @@
 
 body {
     position: relative;
+    width: 100%;
 }
 
 .section {
     background-color: #FCFCFC;
+}
+
+p,
+h2,
+h6 {
+    font-family: NunitoSans;
+    padding-top: 0;
+    color: black;
 }
 
 /* <--- Nav Bar ---> */
@@ -139,20 +148,6 @@ body {
     bottom: 10px;
 }
 
-.lightbox-gallery h2 {
-    font-family: NunitoSans;
-    font-weight: bold;
-    padding-top: 0px;
-    color: black;
-}
-
-.lightbox-gallery p {
-    font-size: 20px;
-    margin-bottom: 40px;
-    padding-top: 0;
-
-}
-
 @media (max-width:767px) {
     .lightbox-gallery h2 {
         margin-bottom: 25px;
@@ -169,85 +164,165 @@ body {
     padding-bottom: 30px
 }
 
-/* <--- Things to do section ---> */
-.backGI{
-    background-image: url('images/city-beach.jpg');
-    height: 100%;
-    z-index: -1;
-}
-sl-tab-group::part(nav){
-    position: relative;
-    /* background-image: url('images/city-beach.jpg'); */
-    /* bottom: 40vh; */
-    height: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
+@media (max-width:576px) {
+
+    .img-thumbnail,
+    .lightbox-gallery .row,
+    .lightbox-gallery .item {
+        padding: 0;
+        transition: 0.75s ease;
+    }
 }
 
-sl-tab-panel::part(base){
+@media (min-width:576px) {
+
+    .img-thumbnail,
+    .lightbox-gallery .row,
+    .lightbox-gallery .item {
+        transition: 0.75s ease;
+    }
+}
+
+/* <--- History/About section ---> */
+.history{
+    position: relative;
+    /* bottom: 10px; */
+    
+    /* top: -100px; */
+}
+.about-history .container {
+    display: block;
+    position: relative;
+    top: -210px;
+    margin: none;
+    height: auto;
+    width: 100%;
+}
+
+@media (max-width:767px) {
+    .about-history h2 {
+        margin-bottom: 25px;
+        padding-top: 250px;
+        font-size: 24px
+    }
+}
+
+@media (max-width:400px) {
+
+    .history{
+        font-size: 12px;
+    }
+}
+
+/* CSS animation for changing images in about/history slides */
+.img-fade img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+}
+
+/* Fades the images between each one */
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 1;
+    }
+
+    53% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#img2 {
+    animation-delay: -4s;
+}
+
+#img3 {
+    animation-delay: -2s;
+}
+
+/* Custom arrows on fullpage horizontal slides */
+.fp-controlArrow.fp-prev {
+    left: 38px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    background: url("images/clipart2826625-left.png") no-repeat;
+    cursor: pointer;
+}
+
+.fp-controlArrow.fp-next {
+    right: 0;
+    border: none;
+    width: 50px;
+    height: 50px;
+    background: url("images/clipart2826625-right.png") no-repeat;
+    cursor: pointer;
+}
+
+/* Change position of arrows on screen to avoid overlapping text */
+@media (max-width:640px) {
+
+    .fp-controlArrow.fp-prev,
+    .fp-controlArrow.fp-next {
+        top: 95%;
+        transition: 0.75s ease;
+    }
+}
+
+/* <--- Things to do section ---> */
+/* Shoelace tab panel */
+sl-tab-group::part(nav) {
     display: flex;
-    justify-content:space-around;
+    justify-content: center;
+}
+
+sl-tab-panel::part(base) {
+    display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
+/* Shoelace cards within tab panel */
 .card-overview {
     max-width: 300px;
-  }
-
-  .card-overview small {
-    color: var(--sl-color-neutral-500);
-  }
-
-  .card-overview [slot="footer"] {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-  }
-
-/* .sl-tab-panel{
-    font-family: NunitoSans;
-    font-weight: bold;
-    color: black;
-    padding: 5px;
-    margin: auto;
-    border: none;
 }
-sl-tab-group{
-    /* font-family: NunitoSans;
-    font-weight: bold;
+
+.card-overview small {
+    color: var(--sl-color-neutral-500);
+}
+
+.card-overview [slot="footer"] {
     display: flex;
     justify-content: space-between;
-    position: relative;
-    bottom: 40vh;
-    margin-left: auto;
-    margin-right: auto; */
-    
-/* }
-sl-tab-panel{
-    height: auto;
-} */ 
+    align-items: center;
+}
 
 /* <--- Getting here section ---> */
-
 .getting-here .container {
     position: relative;
     bottom: 10px;
-
 }
 
-.getting-here h2 {
+.getting-here li {
     font-family: NunitoSans;
-    font-weight: bold;
-    padding-top: 0px;
-    color: black;
-}
-
-.getting-here p {
-    font-family: NunitoSans;
-    font-size: 20px;
-    margin-bottom: 40px;
     padding-top: 0;
 }
 
@@ -257,6 +332,7 @@ sl-tab-panel{
     justify-content: center;
 }
 
+/* Remove embeded google maps on smaller screens */
 @media screen and (max-width: 615px) {
     .google-iframe {
         display: none;
