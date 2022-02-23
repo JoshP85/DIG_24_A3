@@ -27,6 +27,8 @@ function fadeNavBarBackground() {
     }
 }
 
+
+// Changes the hero image to night if the switch is clicked
 const photoSwitch = document.querySelector('#selTheme');
 
 photoSwitch.addEventListener('sl-change', () =>{
